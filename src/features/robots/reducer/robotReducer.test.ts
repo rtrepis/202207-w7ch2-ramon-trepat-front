@@ -3,9 +3,9 @@ import { robotReducer } from "./robotReducer";
 describe("Given the robotReducer function", () => {
   const previousRobotList = [
     {
-      id: 1,
+      id: "1",
       name: "Mazinger",
-      url: "",
+      img: "",
       specs: {
         speed: 0,
         stamina: 0,
@@ -28,9 +28,9 @@ describe("Given the robotReducer function", () => {
     test("Then should return a new robot list same than loadRobot payload", () => {
       const robotListPayload = [
         {
-          id: 1,
+          id: "1",
           name: "Optimus",
-          url: "",
+          img: "",
           specs: {
             speed: 2,
             stamina: 3,

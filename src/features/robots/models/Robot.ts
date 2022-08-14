@@ -1,7 +1,7 @@
 interface Robot {
-  id: number;
+  id: string;
   name: string;
-  url: string;
+  img: string;
   specs: {
     speed: number;
     stamina: number;

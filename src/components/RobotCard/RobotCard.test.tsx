@@ -5,9 +5,9 @@ import userEvent from "@testing-library/user-event";
 
 describe("Given the RobotCard component", () => {
   const robot: Robot = {
-    id: 1,
+    id: "1",
     name: "Optimus",
-    url: "",
+    img: "",
     specs: {
       creationDate: "",
       speed: 0,
