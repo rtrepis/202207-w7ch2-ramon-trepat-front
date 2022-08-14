@@ -13,6 +13,7 @@ describe("Given a Button component", () => {
       expect(button).toBeInTheDocument();
     });
   });
+
   describe("When recibed a action", () => {
     test("Then click button call this action", () => {
       const actionClick = jest.fn();
