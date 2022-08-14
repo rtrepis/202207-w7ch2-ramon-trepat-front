@@ -1,6 +1,6 @@
 import Robot from "../../features/robots/models/Robot";
 import Button from "../Button/Button";
-import RobotStyled from "./RobotCardStyled";
+import RobotCardStyled from "./RobotCardStyled";
 
 interface RobotCardProps {
   robot: Robot;
@@ -9,7 +9,7 @@ interface RobotCardProps {
 
 const RobotCard = ({ robot, actionOnClick }: RobotCardProps): JSX.Element => {
   return (
-    <RobotStyled className="card">
+    <RobotCardStyled className="card">
       <div className="card-header">
         <img
           src={robot.img}
@@ -25,7 +25,7 @@ const RobotCard = ({ robot, actionOnClick }: RobotCardProps): JSX.Element => {
         <span className="card-containter__spect--bold">{`Create Data: ${robot.specs.creationDate}`}</span>
       </div>
       <Button text="X" actionClick={actionOnClick} />
-    </RobotStyled>
+    </RobotCardStyled>
   );
 };
 

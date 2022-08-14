@@ -5,6 +5,7 @@ import Robot from "../../features/robots/models/Robot";
 import RobotCard from "../RobotCard/RobotCard";
 import * as actionsCreator from "../../features/robots/reducer/actionsCreator/actionsCreator";
 import { RootState } from "../../app/store";
+import RobotCardListStyled from "./RobotCardListStyled";
 
 const RobotCardList = (): JSX.Element => {
   const robots = useSelector((state: RootState) => state.robots);
@@ -22,11 +23,11 @@ const RobotCardList = (): JSX.Element => {
   console.log(robots);
 
   return (
-    <>
+    <RobotCardListStyled>
       {robots.map((robot) => (
         <RobotCard key={robot.id} robot={robot} actionOnClick={() => {}} />
       ))}
-    </>
+    </RobotCardListStyled>
   );
 };
 

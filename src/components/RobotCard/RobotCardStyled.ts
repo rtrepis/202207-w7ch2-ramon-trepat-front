@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-const RobotStyled = styled.article`
+const RobotCardStyled = styled.article`
+  position: relative;
   font-size: 1rem;
-  max-width: 250px;
+  width: 400px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 1);
   color: #000;
@@ -28,14 +29,22 @@ const RobotStyled = styled.article`
     }
   }
 
-  .card-containter {
-    text-align: center;
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
     &__spect {
       &--bold {
         font-weight: 700;
       }
     }
   }
+
+  .button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 `;
 
-export default RobotStyled;
+export default RobotCardStyled;

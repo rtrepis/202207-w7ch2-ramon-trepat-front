@@ -1,7 +1,11 @@
 import RobotCardList from "./components/RobotCardList/RobotCardList";
 
 const App = () => {
-  return <RobotCardList />;
+  return (
+    <div className="main-container">
+      <RobotCardList />
+    </div>
+  );
 };
 
 export default App;
