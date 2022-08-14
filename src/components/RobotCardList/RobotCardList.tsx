@@ -20,8 +20,6 @@ const RobotCardList = (): JSX.Element => {
       .then((robots) => dispatch(actionsCreator.loadRobots(robots)));
   }, [dispatch, repoRobots]);
 
-  console.log(robots);
-
   return (
     <RobotCardListStyled>
       {robots.map((robot) => (
