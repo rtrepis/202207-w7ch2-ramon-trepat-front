@@ -4,9 +4,9 @@ import * as actionsCreator from "./actionsCreator/actionsCreator";
 
 const initialListRobots: Robot[] = [
   {
-    id: 1,
+    id: "1",
     name: "",
-    url: "",
+    img: "",
     specs: {
       speed: 0,
       stamina: 0,

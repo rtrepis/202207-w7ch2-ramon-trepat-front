@@ -1,5 +1,7 @@
+import RobotCardList from "./components/RobotCardList/RobotCardList";
+
 const App = () => {
-  return <h1>Hello World</h1>;
+  return <RobotCardList />;
 };
 
 export default App;

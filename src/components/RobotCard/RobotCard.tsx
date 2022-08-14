@@ -12,7 +12,7 @@ const RobotCard = ({ robot, actionOnClick }: RobotCardProps): JSX.Element => {
     <RobotStyled className="card">
       <div className="card-header">
         <img
-          src={robot.url}
+          src={robot.img}
           className="card-header__img"
           alt={`The robot ${robot.name}`}
           height="70px"
