@@ -20,5 +20,9 @@ export const robotReducer = createReducer(initialListRobots, (builder) => {
     ...action.payload,
   ]);
 
+  builder.addCase(actionsCreator.deleteRobots, (state, action) =>
+    state.filter((robot) => robot.id !== action.payload)
+  );
+
   builder.addDefaultCase((robotList: Robot[]) => [...robotList]);
 });
