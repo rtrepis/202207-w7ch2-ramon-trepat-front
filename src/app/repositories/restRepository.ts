@@ -1,5 +1,5 @@
 interface RestRepositoryType<T> {
-  getAll: () => Promise<T[]>;
+  getAll: () => Promise<T>;
 }
 
 class RestRepsitory<T> implements RestRepositoryType<T> {
