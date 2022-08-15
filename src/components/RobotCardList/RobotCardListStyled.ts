@@ -5,7 +5,7 @@ const RobotCardListStyled = styled.section`
   padding: 2rem;
   gap: 2rem;
   max-width: 800px;
-  flex-wrap: wrap;
+  flex-direction: column;
 `;
 
 export default RobotCardListStyled;
