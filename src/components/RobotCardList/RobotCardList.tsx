@@ -6,13 +6,17 @@ import * as actionsCreator from "../../features/robots/reducer/actionsCreator/ac
 import { RootState } from "../../app/store";
 import RobotCardListStyled from "./RobotCardListStyled";
 import RobotsAPI from "../../types/types";
+import Robot from "../../features/robots/models/Robot";
 
 const RobotCardList = (): JSX.Element => {
   const robots = useSelector((state: RootState) => state.robots);
   const url = process.env.REACT_APP_API_URL as string;
   const dispatch = useDispatch();
 
-  const repoRobots = useMemo(() => new RestRepsitory<RobotsAPI>(url), [url]);
+  const repoRobots = useMemo(
+    () => new RestRepsitory<Robot, Response>(url),
+    [url]
+  );
 
   useEffect(() => {
     repoRobots
@@ -22,10 +26,22 @@ const RobotCardList = (): JSX.Element => {
       );
   }, [dispatch, repoRobots]);
 
+  const handleDelete = (id: string) => {
+    repoRobots.delete(id).then((response) => {
+      if (response.ok) {
+        dispatch(actionsCreator.deleteRobots(id));
+      }
+    });
+  };
+
   return (
     <RobotCardListStyled>
       {robots.map((robot) => (
-        <RobotCard key={robot.id} robot={robot} actionOnClick={() => {}} />
+        <RobotCard
+          key={robot.id}
+          robot={robot}
+          actionOnClick={() => handleDelete(robot.id)}
+        />
       ))}
     </RobotCardListStyled>
   );
