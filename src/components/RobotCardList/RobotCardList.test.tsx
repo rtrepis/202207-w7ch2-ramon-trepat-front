@@ -21,7 +21,7 @@ describe("Given a RobotCardList component", () => {
 
       render(
         <Provider store={store}>
-          <RobotCardList />{" "}
+          <RobotCardList />
         </Provider>
       );
 
