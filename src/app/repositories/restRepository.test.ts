@@ -17,15 +17,18 @@ describe("Give the class restRepository", () => {
       expect(expectGetAll).toStrictEqual(robotsMock);
     });
   });
-  describe("When we have a instace delete method with id", () => {
-    test("Then not shoul show this id", async () => {
+
+  describe("When we have a instance delete method with id", () => {
+    test("Then not should show this id", async () => {
       const url: string = "";
       const repo = new RestRepsitory(url);
       const deleteId = "1";
 
-      global.fetch = jest.fn().mockReturnValue({ ok: true });
+      global.fetch = jest.fn().mockResolvedValue({ ok: true });
 
-      await repo.delete(deleteId);
+      const result = await repo.delete(deleteId);
+
+      expect(result).toStrictEqual({ ok: true });
     });
   });
 });
